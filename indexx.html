@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Downloader</h1>
+        <form id="youtube-form">
+            <label for="youtube-link">Paste YouTube link:</label>
+            <input type="text" id="youtube-link" placeholder="e.g., 
+            https://www.youtube.com/watch?v=VIDEO_ID" required>
+            <label for="media-type">Choose media type:</label>
+            <select id="media-type">
+                <option value="audio">Audio</option>
+                <option value="video">Video</option>
+            </select>
+            <button type="button" onclick="downloadMedia()">Download</button>
+        </form>
+        <p id="success-message"></p>
+    </div>
+
+    <script>
+        function downloadMedia() {
+            const url = document.getElementById("youtube-link").value;
+            const mediaType = document.getElementById("media-type").value;
+
+            // Send the URL and media type to your Python backend (using AJAX or other methods)
+            // Process the response and display a success message
+            // Example:document.getElementById("success-message").textContent = "Download successful!";
+        }
+    </script>
+</body>
+</html>
